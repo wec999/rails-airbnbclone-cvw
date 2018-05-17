@@ -3,7 +3,11 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+
+    @flat = Flat.find(params[:flat_id])
+    @bookings = Booking.where(flat_id: params[:flat_id])
+
+
   end
 
   def show
