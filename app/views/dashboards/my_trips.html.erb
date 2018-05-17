@@ -1,8 +1,20 @@
 <h1>My Trips</h1>
 
+
 <% @trips.each do |trip|%>
-<p><%= trip.flat.name %></p>
-<p>From: <%= trip.start_date %> To: <%= trip.start_date %></p>
-<p>Price: <%= trip.total_price %></p>
-<p>Host: <%= trip.flat.user.email %></p>
+<div class="trip">
+  <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+    <div class="trip-price">
+    <p>Host: <%= trip.flat.user.email %></p>
+    </div>
+  <div class="trip-body">
+    <h3><%= trip.flat.name %></h3>
+    <h2><%= trip.flat.location %></h2>
+    <p><%= trip.start_date %> - <%= trip.start_date %></p>
+  </div>
+  <div class="trip-status">
+    <p class="status pending">Pending</p>
+    <p class="price">Total price: <%= trip.total_price %></p>
+  </div>
+</div>
 <% end %>
