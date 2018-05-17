@@ -9,10 +9,21 @@
 <p>Start_date: <%= @booking.start_date %></p>
 <p>End date: <%= @booking.end_date %></p>
 <p>price: $<%= @booking.total_price %></p>
+<p>STATUS: <%= @booking.status %></p>
 <h2>CLIENT NAME <%= @booking.user.email %></h2>
 
 
 
 <%= link_to "Delete this Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
-
 <%= link_to "Edit this Booking", edit_flat_booking_path(@flat, @booking) %>
+<hr>
+
+<%= simple_form_for [@flat, @booking] do |f| %>
+  <%= f.hidden_field :status, value: "Aproved" %>
+  <%= f.submit "Approve", class: "btn btn-primary" %>
+<% end %>
+
+<%= simple_form_for [@flat, @booking] do |f| %>
+  <%= f.hidden_field :status, value: "Declined" %>
+  <%= f.submit "Decline", class: "btn btn-danger" %>
+<% end %>
