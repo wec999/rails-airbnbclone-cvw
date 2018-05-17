@@ -1,2 +1,18 @@
-<h1>Flats#index</h1>
-<p>Find me in app/views/flats/index.html.erb</p>
+<h1>Explore the jungle with Junglebnb</h1>
+
+<h3 class="text-left">Jungle Flats</h3>
+<p>Explore some of the best-reviewed jungle flats in the world</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="flats">
+        <% @flats.each do |flat| %>
+          <h4><%= flat.title %></h4>
+          <p><%= flat.discription %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
