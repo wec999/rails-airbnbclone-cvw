@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-
+    @flat = Flat.find(params[:flat_id])
   end
 
   def new
@@ -18,9 +18,7 @@ class BookingsController < ApplicationController
 
   def create
     @flat = Flat.find(params[:flat_id])
-
     @booking = Booking.new(booking_params)
-    #@booking.total_price = 10
     @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @flat.price #saving price
     @booking.flat = @flat
     @booking.user = current_user
@@ -39,7 +37,11 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @flat = Flat.find(params[:flat_id])
     @booking.update(booking_params)
+    @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @flat.price #saving price
+    @booking.save
+    redirect_to flat_booking_path(@flat, @booking)
   end
 
   def destroy
