@@ -6,10 +6,9 @@
 <p>Description: <%= @booking.flat.description %></p>
 <p>Start_date: <%= @booking.start_date %></p>
 <p>End date: <%= @booking.end_date %></p>
-<p>price: <%= @booking.total_price %></p>
+<p>price: $<%= @booking.total_price %></p>
 <h2>CLIENT NAME <%= @booking.user.email %></h2>
 
 
 
-
-
+<%= link_to "Delete this Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
