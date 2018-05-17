@@ -1,2 +1,14 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Booking for:</h1>
+
+<h1>Flat Name: <%= @booking.flat.name %></h1>
+<h2>Host Name: <%= @booking.flat.user.email %></h2>
+<p>Description: <%= @booking.flat.description %></p>
+<p>Start_date: <%= @booking.start_date %></p>
+<p>End date: <%= @booking.end_date %></p>
+<p>price: <%= @booking.total_price %></p>
+
+
+
+
+
+
