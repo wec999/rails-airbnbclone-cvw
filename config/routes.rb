@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'dashboard', to: 'dashboard#show'
+  get 'dashboard', to: 'dashboards#show'
   resources :flats do
     resources :bookings
   end
