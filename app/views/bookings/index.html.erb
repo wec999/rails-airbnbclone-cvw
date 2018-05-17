@@ -1,11 +1,16 @@
 <h1>Bookings for:</h1>
 
+<h1><%= @flat.id %></h1>
+<h1><%= @flat.name %></h1>
 
-<h1>Flat Name: <%= @booking.flat.name %></h1>
-<h2>Host Name: <%= @booking.flat.user.email %></h2>
-<p>Description: <%= @booking.flat.description %></p>
-<p>Start_date: <%= @booking.start_date %></p>
-<p>End date: <%= @booking.end_date %></p>
-<p>price: <%= @booking.total_price %></p>
 
-<p>Find me in app/views/bookings/index.html.erb</p>
+
+<% @bookings.each do |booking| %>
+  <ul>
+    <li>
+      <p>Booking Id: <%= booking.id %></p>
+
+
+    </li>
+  </ul>
+  <% end %>
