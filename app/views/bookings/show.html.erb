@@ -1,15 +1,18 @@
 <h1>Booking ID : <%= @booking.id %></h1>
 
 
-<h1>Flat Name: <%= @booking.flat.name %></h1>
-<h2>Host Name: <%= @booking.flat.user.email %></h2>
-<p>Description: <%= @booking.flat.description %></p>
+
+<h1>Flat Name: <%= @flat.name %></h1>
+<h1>Flat Id: <%= @flat.id %></h1>
+<h2>Host Name: <%= @flat.user.email %></h2>
+<p>Description: <%= @flat.description %></p>
 <p>Start_date: <%= @booking.start_date %></p>
 <p>End date: <%= @booking.end_date %></p>
-<p>price: <%= @booking.total_price %></p>
+<p>price: $<%= @booking.total_price %></p>
 <h2>CLIENT NAME <%= @booking.user.email %></h2>
 
 
 
+<%= link_to "Delete this Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
 
-
+<%= link_to "Edit this Booking", edit_flat_booking_path(@flat, @booking) %>
