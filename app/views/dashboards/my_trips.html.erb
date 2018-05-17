@@ -1,0 +1,8 @@
+<h1>My Trips</h1>
+
+<% @trips.each do |trip|%>
+<p><%= trip.flat.name %></p>
+<p>From: <%= trip.start_date %> To: <%= trip.start_date %></p>
+<p>Price: <%= trip.total_price %></p>
+<p>Host: <%= trip.flat.user.email %></p>
+<% end %>
