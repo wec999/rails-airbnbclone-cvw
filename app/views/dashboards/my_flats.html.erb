@@ -1,22 +1,22 @@
-<h1>My Flats and bookings</h1>
+<h1>My Flats & Bookings</h1>
 
 <% @my_flats.each do |flat| %>
 <h2><%= flat.name %></h2>
-<ul>
 <% flat.bookings.each do |booking|%>
-<li><%= booking.total_price %></li>
-<p><%= booking.status %></p>
+<div class="booking">
+  <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+    <div class="booking-price">
+    <p>Guest: <%= booking.user.email %></p>
+    </div>
+  <div class="booking-body">
+    <h3><%= booking.flat.name %></h3>
+    <h2><%= booking.flat.location %></h2>
+    <p><%= booking.start_date %> - <%= booking.start_date %></p>
+  </div>
+  <div class="booking-status">
+    <p class="status pending">Status: <%= booking.status %></p>
+    <p class="price">Total price: <%= booking.total_price %></p>
+  </div>
+</div>
 <% end %>
-</ul>
 <% end %>
-
-<h2>Booking requests:</h2>
-<% @my_flats.each do %>
-<% flat.bookings.each do |booking| %>
-<% if booking.status == "Pending" %>
-<p><%= booking.flat_id %></p>
-<p><%= booking.status %></p>
-<% end %>
-<% end %>
-<% end %>
-

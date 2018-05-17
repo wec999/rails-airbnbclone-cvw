@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get '/my_trips', to: 'dashboards#my_trips'
-  get '/my_trips', to: 'dashboards#my_trips'
+  get '/my_flats', to: 'dashboards#my_flats'
 
   resources :flats do
     resources :bookings
