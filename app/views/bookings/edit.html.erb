@@ -1,2 +1,14 @@
-<h1>Bookings#edit</h1>
-<p>Find me in app/views/bookings/edit.html.erb</p>
+<h1>Bookings#EDIT</h1>
+
+<h1>Booking for:</h1>
+
+<h1>Flat Name: <%= @flat.name %></h1>
+<h2>Host Name: <%= @flat.user.email %></h2>
+<p>Description: <%= @flat.description %></p>
+
+
+<%= render 'form', booking: @booking, flat: @flat, button_text: "Edit booking" %>
+
+<h3>TOTAL_PRICE: #####JAVASCRIPT THING####%></h3>
+
+
