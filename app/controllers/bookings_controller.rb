@@ -18,15 +18,20 @@ class BookingsController < ApplicationController
 
   def create
     @flat = Flat.find(params[:flat_id])
+
     @booking = Booking.new(booking_params)
-    @booking.total_price = (@booking.end_date - @booking.start_date).to_i * price #saving price
+    @booking.total_price = 10
+    # @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @flat.price #saving price
     @booking.flat = @flat
+    @booking.user_id = 1
 
     if @booking.save
-      redirect_to bookings_path
+      redirect_to flat_booking_path(@flat, @booking)
     else
       render :new
     end
+
+
   end
 
   def edit
