@@ -7,15 +7,11 @@
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
         <% if user_signed_in? %>
-          <p>
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
           <a href="" class="navbar-wagon-item navbar-wagon-link">My Upcoming Trips</a>
           <a href="" class="navbar-wagon-item navbar-wagon-link">Add a flat</a>
           <% if current_user.host? %>
            <a href="" class="navbar-wagon-item navbar-wagon-link">My Flats & Bookings</a>
            <% end %>
-
-
         <% else %>
           <p>
           <%= link_to('Login', new_user_session_path)  %>
@@ -32,7 +28,8 @@
 
               <li><a href="#">Profile</a></li>
               <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Log Out</a></li>
+              <li>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
 
             </ul>
           </div>
