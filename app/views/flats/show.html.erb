@@ -1,2 +1,15 @@
-<h1>Flats#show</h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h4><%= @flat.image %></h4>
+        <h4><%= @flat.name %></h4>
+        <h4><%= @flat.location %></h4>
+        <h4><%= @flat.price %></h4>
+        <p><%= @flat.description %></p>
+      <%= link_to 'Back', flats_path %>
+      <%= link_to "Delete", flats_path(@flat),
+      method: :delete,
+      data: { confirm: "Are you certain?" } %>
+    </div>
+  </div>
+</div>

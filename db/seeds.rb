@@ -23,15 +23,9 @@ Flat.create(user_id: 2, name: "Mountain View Flat 2", location:"address", image:
 
 Flat.create(user_id: 3, name: "Downtown flat", location: "downtown address", image: "city image", description: "beautiful flat - ideal location- central downtown", price: 50)
 
-
-Flat.create(user_id: 3, name: "Downtown flat", location: "downtown address", image: "city image", description: "beautiful flat - ideal location- central downtown", price: 50)
-
 Flat.create(user_id: 4, name: "Brand New Apartment", location: "new address", image: "new apartment image", description: "brand new apartment, ideal location", price: 50)
 Flat.create(user_id: 4, name: "Trendy Flat", location: "downtown address", image: "another image", description: "another apartment", price: 50)
 Flat.create(user_id: 1, name: "Cool flat", location: "this address", image: "this image", description: "text", price: 50)
-Flat.create(user_id: 1, name: "Cool flat1", location: "this address1", image: "this image1", description: "text1", price: 50)
-Flat.create(user_id: 2, name: "Cool flat2", location: "this address2", image: "this image2", description: "text2", price: 50)
-Flat.create(user_id: 3, name: "Cool flat3", location: "this address3", image: "this image3", description: "text3", price: 50)
 Flat.create(user_id: 4, name: "Awesome flat", location: "this address3", image: "this image3", description: "text3", price: 50)
 Flat.create(user_id: 4, name: "Very cool flat", location: "this address3", image: "this image3", description: "text3", price: 50)
 
