@@ -9,8 +9,11 @@
     <div class="col-sm-8 col-sm-offset-2">
       <div id="flats">
         <% @flats.each do |flat| %>
-          <h4><%= flat.title %></h4>
-          <p><%= flat.discription %></p>
+        <h4><%= flat.image %></h4>
+        <h4><%= flat.name %></h4>
+        <h4><%= flat.location %></h4>
+        <h4><%= flat.price %></h4>
+        <p><%= flat.description %></p>
         <% end %>
       </div>
     </div>
