@@ -1,0 +1,20 @@
+<h1>My Upcoming Trips</h1>
+
+
+<% @trips.each do |trip|%>
+<div class="trip">
+  <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+    <div class="trip-price">
+    <p>Host: <%= trip.flat.user.email %></p>
+    </div>
+  <div class="trip-body">
+    <h3><%= trip.flat.name %></h3>
+    <h4><%= trip.flat.location %></h4>
+    <p><%= trip.start_date %> - <%= trip.start_date %></p>
+  </div>
+  <div class="trip-status">
+    <p class="status pending">Status: <%= trip.status %></p>
+    <p class="price">Total price: <%= trip.total_price %></p>
+  </div>
+</div>
+<% end %>
