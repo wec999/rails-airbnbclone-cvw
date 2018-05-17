@@ -17,7 +17,10 @@ User.create(email: "la@la.com", password: "lalala")
 User.create(email: "ba@ba.com", password: "bababa")
 User.create(email: "val@val.com", password: "valerie")
 
-Flat.create(user_id: 1, name: "Mountain View Flat", location: "this address", image: "flat image", description: "Overlooking the bittroot mountains", price: 50)
+Flat.create(user_id: 1, name: "Mountain View Flat", location: "this address", image: "flat image", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
+Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
+It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
+You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums. ", price: 50)
 Flat.create(user_id: 1, name: "Ocean View Flat", location: "another address", image: "ocean view image", description: "overlooking the pacific ocean", price: 50)
 Flat.create(user_id: 2, name: "Mountain View Flat 2", location:"address", image: "image 3", description: "overlooking ocean with mountain backdrop", price: 50)
 
