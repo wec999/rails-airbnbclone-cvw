@@ -15,6 +15,7 @@
         <h4><%= flat.location %></h4>
         <h4><%= flat.price %></h4>
         <p><%= flat.description %></p>
+        <%= link_to flat.name, flat_path(flat.id) %>
         <% end %>
       </div>
     </div>
