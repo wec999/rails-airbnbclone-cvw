@@ -1,14 +1,15 @@
+
+
 <h1>Explore the jungle with Junglebnb</h1>
 
 <h3 class="text-left">Jungle Flats</h3>
 <p>Explore some of the best-reviewed jungle flats in the world</p>
 
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div id="flats">
-        <% @flats.each do |flat| %>
+    <% @flats.each do |flat| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
         <h4><%= flat.image %></h4>
         <h4><%= flat.name %></h4>
         <h4><%= flat.location %></h4>
@@ -19,3 +20,4 @@
     </div>
   </div>
 </div>
+

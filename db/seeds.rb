@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(email: "john@gmail.com" password: "password")
-User.create(email: "carol@gmail.com" password: "password")
+User.create(email: "john@gmail.com", password: "password")
+User.create(email: "carol@gmail.com", password: "password")
 User.create(email: "bill@gmail.com", password: "password")
-User.create(email: "val@gmail.com" password: "password")
+User.create(email: "val@gmail.com", password: "password")
 
 User.create(email: "bla@bla.com", password: "blabla")
 User.create(email: "la@la.com", password: "lalala")
@@ -22,7 +22,7 @@ Flat.create(user_id: 1, name: "Ocean View Flat", location: "another address", im
 Flat.create(user_id: 2, name: "Mountain View Flat 2", location:"address", image: "image 3", description: "overlooking ocean with mountain backdrop", price: 50)
 
 
-Flat.create(user_id: 3, name: "Downtown flat": "downtown address", image: "city image", description: "beautiful flat - ideal location- central downtown", price: 50)
+Flat.create(user_id: 3, name: "Downtown flat", location: "downtown address", image: "city image", description: "beautiful flat - ideal location- central downtown", price: 50)
 
 Flat.create(user_id: 4, name: "Brand New Apartment", location: "new address", image: "new apartment image", description: "brand new apartment, ideal location", price: 50)
 Flat.create(user_id: 4, name: "Trendy Flat", location: "downtown address", image: "another image", description: "another apartment", price: 50)
