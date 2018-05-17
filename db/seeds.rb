@@ -6,10 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+User.create(email: "john@gmail.com" password: "password")
+User.create(email: "carol@gmail.com" password: "password")
+User.create(email: "bill@gmail.com", password: "password")
+User.create(email: "val@gmail.com" password: "password")
+
 User.create(email: "bla@bla.com", password: "blabla")
 User.create(email: "la@la.com", password: "lalala")
 User.create(email: "ba@ba.com", password: "bababa")
 User.create(email: "val@val.com", password: "valerie")
+
+Flat.create(user_id: 1, name: "Mountain View Flat", location: "this address", image: "flat image", description: "Overlooking the bittroot mountains", price: 50)
+Flat.create(user_id: 1, name: "Ocean View Flat", location: "another address", image: "ocean view image", description: "overlooking the pacific ocean", price: 50)
+Flat.create(user_id: 2, name: "Mountain View Flat 2", location:"address", image: "image 3", description: "overlooking ocean with mountain backdrop", price: 50)
+
+
+Flat.create(user_id: 3, name: "Downtown flat": "downtown address", image: "city image", description: "beautiful flat - ideal location- central downtown", price: 50)
+
+Flat.create(user_id: 4, name: "Brand New Apartment", location: "new address", image: "new apartment image", description: "brand new apartment, ideal location", price: 50)
+Flat.create(user_id: 4, name: "Trendy Flat", location: "downtown address", image: "another image", description: "another apartment", price: 50)
 
 Flat.create(user_id: 1, name: "Cool flat", location: "this address", image: "this image", description: "text", price: 50)
 Flat.create(user_id: 1, name: "Cool flat1", location: "this address1", image: "this image1", description: "text1", price: 50)
