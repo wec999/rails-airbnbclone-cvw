@@ -7,12 +7,16 @@
 <% flat.bookings.each do |booking|%>
 <div class="booking">
   <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+
   <div class="booking-price">
     <p>Guest: <%= booking.user.email %></p>
   </div>
+
+    <div class="booking-price">
+    <h4><%= booking.flat.name %></h4>
+    </div>
   <div class="booking-body">
-    <h3><%= booking.flat.name %></h3>
-    <h4><%= booking.flat.location %></h4>
+    <h4>Guest: <%= booking.user.email %></h4>
     <p><%= booking.start_date %> - <%= booking.start_date %></p>
   </div>
 
@@ -29,7 +33,6 @@
     <%= f.hidden_field :status, value: "Declined" %>
     <%= f.submit "Decline", class: "btn btn-danger" %>
     <% end %>
-
 
     <p class="price">Total price: <%= booking.total_price %></p>
   </div>
