@@ -5,8 +5,7 @@
 <% @my_flats.each do |flat| %>
 <h1><%= flat.name %></h1>
 <% end %>
-
-
-<% @my_bookings.each do |booking| %>
+<% @my_flats.flat.bookings.each do |booking| %>
 <p><%= booking.total_price %></p>
 <% end %>
+
