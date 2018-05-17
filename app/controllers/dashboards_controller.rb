@@ -1,11 +1,7 @@
 class DashboardsController < ApplicationController
-  before_action :host?
-
-  def host?
-    @host = current_user.flats.any?
-  end
 
   def show
+    @host = current_user.host?
     @trips = current_user.bookings
     if @host
       @my_flats = current_user.flats
