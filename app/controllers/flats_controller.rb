@@ -4,17 +4,15 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-    # Flat.where.not(latitude: nil, longitude: nil)
-
-    @markers = @flats.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude,
-      }
-    end
   end
 
   def show
+        @markers =
+      {
+        lat: @flat.latitude,
+        lng: @flat.longitude,
+      }
+
   end
 
   def new
@@ -52,7 +50,8 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :location, :description, :price, :photo)
+    params.require(:flat).permit(:name, :address, :description, :price, :photo)
   end
+
 end
 
