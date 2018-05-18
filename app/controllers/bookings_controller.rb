@@ -3,11 +3,8 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-
     @flat = Flat.find(params[:flat_id])
     @bookings = Booking.where(flat_id: params[:flat_id])
-
-
   end
 
   def show
@@ -52,6 +49,22 @@ class BookingsController < ApplicationController
   end
 
   def change_status
+    @flat = Flat.find(params[:flat_id])
+    @booking = @flat.booking
+
+
+    # _approve
+
+    # @booking.status = "Approved"
+    # @booking.save
+    # redirect_to my_flats_path
+  end
+
+  def change_status_decline
+    @flat = Flat.find(params[:flat_id])
+    @booking.status = "Declined"
+    @booking.save
+    redirect_to my_flats_path
   end
 
   private
