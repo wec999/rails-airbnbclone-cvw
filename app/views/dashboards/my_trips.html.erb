@@ -3,11 +3,10 @@
 
 <% @trips.each do |trip|%>
 <div class="trip">
-  <img class="image-flat" src="https://source.unsplash.com/600x600/?treehouse">
-    <div class="trip-name">
-    <p>Host:</p>
-      <hr>
-      <p><%= trip.flat.user.email %></p>
+
+  <img class="image-square" src="<%= cl_image_path trip.flat.photo%>">
+    <div class="trip-price">
+    <p>Host: <%= trip.flat.user.email %></p>
     </div>
   <div class="trip-body">
     <h3><%= trip.flat.name %></h3>

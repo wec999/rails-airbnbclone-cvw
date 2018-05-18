@@ -1,7 +1,8 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="https://www.shareicon.net/data/128x128/2016/08/18/810510_nature_512x512.png" alt="logo">
+    <%=  image_tag "jungleicon.png"%>
+
   </a>
 
   <!-- Right Navigation -->
@@ -21,7 +22,10 @@
     <% if user_signed_in? %>
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+
+        <%= image_tag "woman.png", class:"avatar dropdown-toggle", id:"navbar-wagon-menu", data: {toggle: "dropdown"} %>
+
+
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
 
           <li><a href="#">Profile</a></li>
