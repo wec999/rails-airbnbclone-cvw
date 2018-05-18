@@ -1,14 +1,19 @@
-<div class="container">
+<div class="container-dashboard">
+  <div class="text-center">
 
   <h1>My Flats & Bookings</h1>
-
+</div>
   <div class="flexed-items">
     <div class="half-items">
       <% @my_flats.each do |flat| %>
+      <div class="flat">
+      <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+
       <h3><%= flat.name %></h3>
 
 
 
+    </div>
     </div>
 
     <div class="half-items">
