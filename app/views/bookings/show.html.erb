@@ -23,20 +23,6 @@
       </div>
     </div>
 
-
-
-    <h6>###BUTTONS ONLY FOR ADMIN</h6>
-
-    <%= simple_form_for [@flat, @booking] do |f| %>
-    <%= f.hidden_field :status, value: "Approved" %>
-    <%= f.submit "Approve", class: "btn btn-primary" %>
-    <% end %>
-
-    <%= simple_form_for [@flat, @booking] do |f| %>
-    <%= f.hidden_field :status, value: "Declined" %>
-    <%= f.submit "Decline", class: "btn btn-danger" %>
-    <% end %>
-
   </div>
 
 

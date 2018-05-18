@@ -4,12 +4,13 @@
   <% @my_flats.each do |flat| %>
   <div class="flexed-items">
     <div class="half-items">
-      <div class="flat-card" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), url('https://source.unsplash.com/700x700/?jungle');">
+      <div class="flat-card">
+        <img class="image-square" src="<%= cl_image_path flat.photo%>">
         <div class="flat-name">
           <h2><%= flat.name %></h2>
         </div>
         <div class="flat-location">
-          <h4><%= flat.location %></h4>
+          <h4><%= flat.address %></h4>
         </div>
         <div class="flat-body">
           <h4>Number of bookings: <%= flat.bookings.count %></h4>

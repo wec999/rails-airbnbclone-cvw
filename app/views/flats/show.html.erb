@@ -19,12 +19,19 @@
         <!-- <p><strong>Days of Reservation:</strong> <%#= (@booking.end_date - @booking.start_date).to_i %></p> -->
         <p><strong>Price per day:</strong> $<%= @flat.price %></p>
         <!-- <p><strong>Reservation Statu:</strong><%#= @booking.status %></p> -->
-        <%= link_to "Make a Reservation", new_flat_booking_path(@flat) %>
-        <%#= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
-        <%= link_to 'Back', flats_path %>
-      <%= link_to "Delete", flats_path(@flat),
+
+        <% if current_user == @flat.user %>
+
+      <%= link_to "Delete", flat_path(@flat),
       method: :delete,
       data: { confirm: "Are you certain?" } %>
+      <% else %>
+        <%= link_to "Make a Reservation", new_flat_booking_path(@flat) %>
+        <% end %>
+        <br>
+        <%= link_to 'Back', flats_path %>
+        <%#= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
+
       </div>
 
     </div>
