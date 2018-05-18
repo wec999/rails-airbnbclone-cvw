@@ -3,9 +3,11 @@
 
 <% @trips.each do |trip|%>
 <div class="trip">
-  <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
-    <div class="trip-price">
-    <p>Host: <%= trip.flat.user.email %></p>
+  <img class="image-flat" src="https://source.unsplash.com/600x600/?treehouse">
+    <div class="trip-name">
+    <p>Host:</p>
+      <hr>
+      <p><%= trip.flat.user.email %></p>
     </div>
   <div class="trip-body">
     <h3><%= trip.flat.name %></h3>
@@ -14,7 +16,7 @@
   </div>
   <div class="trip-status">
     <p class="status pending">Status: <%= trip.status %></p>
-    <p class="price">Total price: <%= trip.total_price %></p>
+    <p class="trip-price">Total price: <%= trip.total_price %></p>
   </div>
 </div>
 <% end %>

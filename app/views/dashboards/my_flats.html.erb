@@ -5,7 +5,7 @@
   <div class="flexed-items">
     <div class="half-items">
       <div class="flat-card">
-        <img class="image-flat" src="https://source.unsplash.com/200x200/?treehouse">
+        <img class="image-flat" src="https://source.unsplash.com/600x600/?jungle">
         <div class="flat-name">
           <h2><%= flat.name %></h2>
         </div>
@@ -18,23 +18,22 @@
       </div>
     </div>
 
+
       <div class="half-items scroll-box">
         <% flat.bookings.each do |booking|%>
         <div class="booking" id="bookingcard">
           <img class="image-bordered" src="https://source.unsplash.com/200x200/?treehouse">
           <div class="booking-guest">
-            <p>Guest: <%= booking.user.email %></p>
-          </div>
-          <div class="booking-flat">
-            <h4><%= booking.flat.name %></h4>
-
+            <p>Guest:</p>
+            <hr>
+            <p><%= booking.user.email %></p>
           </div>
           <div class="booking-body">
-            <h4>Guest: <%= booking.user.email %></h4>
+            <h4><%= booking.flat.name %></h4>
             <p><%= booking.start_date %> - <%= booking.start_date %></p>
           </div>
           <div class="booking-status">
-            <p class="status pending">Status: <%= booking.status %></p>
+            <p>Status:</p><p class="status pending"> <%= booking.status %></p>
 
             <% if booking.status == "Pending" %>
 
