@@ -42,9 +42,7 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
          <li><%= link_to "Add a flat", new_flat_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
          <li><%= link_to "My Upcoming Trips", my_trips_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
-         <% if current_user.host? %>
          <li><%= link_to "Host Dashboard", my_flats_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
-         <% end %>
        </ul>
      </div>
    </div>
