@@ -5,7 +5,7 @@
   <div class="flexed-items">
     <div class="half-items">
       <div class="flat-card">
-        <img class="image-squared" src="https://source.unsplash.com/200x200/?treehouse">
+        <img class="image-flat" src="https://source.unsplash.com/200x200/?treehouse">
         <div class="flat-name">
           <h2><%= flat.name %></h2>
         </div>
@@ -20,7 +20,7 @@
 
       <div class="half-items scroll-box">
         <% flat.bookings.each do |booking|%>
-        <div class="booking">
+        <div class="booking" id="bookingcard">
           <img class="image-bordered" src="https://source.unsplash.com/200x200/?treehouse">
           <div class="booking-guest">
             <p>Guest: <%= booking.user.email %></p>
@@ -36,17 +36,10 @@
           <div class="booking-status">
             <p class="status pending">Status: <%= booking.status %></p>
 
-            <% if booking.status == "pending" %>
-            <!-- BUTTON APROVED -->
-            <%= simple_form_for [flat, booking] do |f| %>
-            <%= f.hidden_field :status, value: "Approved" %>
-            <%= f.submit "Approve", class: "btn btn-status btn-success" %>
-            <% end %>
-            <!-- BUTTON DECLINED -->
-            <%= simple_form_for [flat, booking] do |f| %>
-            <%= f.hidden_field :status, value: "Declined" %>
-            <%= f.submit "Decline", class: "btn btn-status btn-danger" %>
-            <% end %>
+            <% if booking.status == "Pending" %>
+
+            <%= link_to "Approve", change_status_path, class: "btn btn-status btn-success" %>
+            <%= link_to "Decline", change_status_decline_path, class: "btn btn-status btn-danger" %>
 
             <% end %>
             <p class="price">Total price: <%= booking.total_price %></p>
