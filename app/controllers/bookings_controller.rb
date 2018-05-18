@@ -48,20 +48,26 @@ class BookingsController < ApplicationController
     redirect_to flat_path(@flat)
   end
 
-  def change_status
-    @flat = Flat.find(params[:flat_id])
-    @booking = @flat.booking
+  # def change_status
+  #   @flat = Flat.find(params[:flat_id])
+  #   @booking = @flat.booking
 
 
-    # _approve
+  #   # _approve
 
-    # @booking.status = "Approved"
-    # @booking.save
-    # redirect_to my_flats_path
+  #   # @booking.status = "Approved"
+  #   # @booking.save
+  #   # redirect_to my_flats_path
+  # end
+  def change_status_approve
+    @booking = Booking.find(params[:id])
+    @booking.status = "Approved"
+    @booking.save
+    redirect_to my_flats_path
   end
 
   def change_status_decline
-    @flat = Flat.find(params[:flat_id])
+    @booking = Booking.find(params[:id])
     @booking.status = "Declined"
     @booking.save
     redirect_to my_flats_path
