@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   get '/my_trips', to: 'dashboards#my_trips'
   get '/my_flats', to: 'dashboards#my_flats'
-  get '/change_status', to: 'bookings#change_status'
-  get '/change_status_decline', to: 'bookings#change_status_decline'
+  patch '/bookings/:id/approve', to: 'bookings#change_status_approve', as: 'booking_approve'
+  patch '/bookings/:id/decline', to: 'bookings#change_status_decline', as: 'booking_decline'
 
   resources :flats do
     resources :bookings
