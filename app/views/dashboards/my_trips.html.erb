@@ -3,7 +3,7 @@
 
 <% @trips.each do |trip|%>
 <div class="trip">
-  <img class="image-square" src="https://source.unsplash.com/200x200/?treehouse">
+  <img class="image-square" src="<%= cl_image_path trip.flat.photo%>">
     <div class="trip-price">
     <p>Host: <%= trip.flat.user.email %></p>
     </div>
