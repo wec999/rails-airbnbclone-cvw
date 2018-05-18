@@ -3,6 +3,7 @@
 
 <% @trips.each do |trip|%>
 <div class="trip">
+
   <img class="image-square" src="<%= cl_image_path trip.flat.photo%>">
     <div class="trip-price">
     <p>Host: <%= trip.flat.user.email %></p>
@@ -14,7 +15,7 @@
   </div>
   <div class="trip-status">
     <p class="status pending">Status: <%= trip.status %></p>
-    <p class="price">Total price: <%= trip.total_price %></p>
+    <p class="trip-price">Total price: <%= trip.total_price %></p>
   </div>
 </div>
 <% end %>

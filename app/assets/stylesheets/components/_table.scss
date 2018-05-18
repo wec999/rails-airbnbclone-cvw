@@ -3,6 +3,7 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+
 }
 .trip:last-child {
   border-bottom: none;
@@ -86,6 +87,11 @@
 }
 .booking-body p {
   margin: 6px 0;
+}
+
+.booking-guest p {
+  margin: 6px 0;
+  font-size: 15px;
 }
 .booking-status {
   font-size: 14px;
