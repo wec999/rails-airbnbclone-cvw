@@ -1,10 +1,10 @@
 
-<%= simple_form_for(@flat) do |f| %>
+<%= simple_form_for(flat) do |f| %>
 <%= f.input :name, placeholder: "Kitchy Treehouse with Mountain View" %>
 <%= f.input :location, placeholder: "Crazy Horse Mountain" %>
 <%= f.input :description, placeholder: "Please add a description of your property here" %>
 <%= f.input :price, placeholder: "$50.00." %>
-<%= f.input :image %>
-<%= f.input :image_cache, as: :hidden %>
-<%= f.button :submit, class: "btn btn-primary"  %>
+<%= f.input :photo %>
+<%= f.input :photo_cache, as: :hidden %>
+<%= f.submit button_text, class: "btn btn-primary"  %>
 <% end %>

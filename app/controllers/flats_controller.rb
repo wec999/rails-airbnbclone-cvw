@@ -3,7 +3,14 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
+    @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+      }
+    end
   end
 
   def show
@@ -15,8 +22,12 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
-    @flat.save
-    redirect_to flats_path
+    @flat.user = current_user
+    if @flat.save
+      redirect_to flat_path(@flat)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -40,7 +51,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :location, :image, :description, :price, :user_id)
+    params.require(:flat).permit(:name, :location, :description, :price, :photo)
   end
 end
 
