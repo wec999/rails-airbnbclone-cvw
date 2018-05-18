@@ -2,7 +2,7 @@
 .banner {
   display: flex;
   justify-content: space-around;
-  background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(200,200,200,0.6) 50%), url('https://images.unsplash.com/photo-1494948949099-1311f3e907a9?ixlib=rb-0.3.5&s=6876d041ce865b91f40f44926e47d16c&auto=format&fit=crop&w=1650&q=80');
+  background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(200,200,200,0.6) 50%), asset-url('jungle.jpg');
   background-size: cover;
   height: 50vh;
   align-items: center;
