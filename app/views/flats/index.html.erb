@@ -1,24 +1,31 @@
-
-
 <h1>Explore the jungle with Junglebnb</h1>
 
 <h3 class="text-left">Jungle Flats</h3>
 <p>Explore some of the best-reviewed jungle flats in the world</p>
-
 <div class="container">
   <div class="row">
     <% @flats.each do |flat| %>
-    <div class="col-md-4">
-      <div class="card">
-        <h4><%= flat.image %></h4>
-        <h4><%= flat.name %></h4>
-        <h4><%= flat.location %></h4>
-        <h4><%= flat.price %></h4>
-        <p><%= flat.description %></p>
-        <%= link_to flat.name, flat_path(flat.id) %>
-        <% end %>
+      <div class="col-md-3">
+        <div class="card"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path flat.image %>)">
+        <div class="card-category"><%=flat.price %></div>
+        <div class="card-description">
+          <%= flat.name %>
+          <%=flat.location %>
+          <%= link_to flat.name, flat_path(flat.id) %>
+        </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
 
