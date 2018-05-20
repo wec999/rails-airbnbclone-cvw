@@ -8,10 +8,10 @@ class FlatsController < ApplicationController
 
   def show
         @markers =
-      {
+      [{
         lat: @flat.latitude,
         lng: @flat.longitude,
-      }
+      }]
 
   end
 
