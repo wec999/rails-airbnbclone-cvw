@@ -1,10 +1,13 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%=  image_tag "jungleicon.png"%>
-
-  </a>
-
+<div class="navbar-wagon-left">
+    <a href="/" class="navbar-wagon-brand">
+      <%=  image_tag "jungleicon.png"%>
+    </a>
+    <form action="/flats" method="GET">
+      <input type="text" name="query" id="query" placeholder="Search.." class="glyphicon glyphicon-search input-search">
+    </form>
+</div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
@@ -22,17 +25,13 @@
     <% if user_signed_in? %>
     <div class="navbar-wagon-item">
       <div class="dropdown">
-
         <%= image_tag "woman.png", class:"avatar dropdown-toggle", id:"navbar-wagon-menu", data: {toggle: "dropdown"} %>
-
-
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
 
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
           <li>
             <%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-
           </ul>
         </div>
       </div>
