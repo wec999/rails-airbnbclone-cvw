@@ -12,10 +12,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
     <%= link_to "Add a House", new_flat_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "My Upcoming Trips", my_trips_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% if current_user.host? %>
-    <%= link_to "Host Dashboard", my_flats_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
+    <%= link_to "My Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% else %>
     <%= link_to "Login", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Sign Up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
