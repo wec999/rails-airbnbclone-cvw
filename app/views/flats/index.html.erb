@@ -1,7 +1,13 @@
+
+
+<%= render 'layouts/banner' %>
+<br>
+<br>
 <div class="flex container">
-  <h1>Top Flats</h1>
+<div class="container">
   <div class="row">
     <% @flats.each do |flat| %>
+
     <div class="col-md-6">
       <% if flat.photo.file == nil %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
@@ -19,7 +25,6 @@
       <div class="col-md-6">
        <div id="map" style="width: 100%; height: 900px;" data-markers="<%= @markers.to_json %>"></div>
      </div>
-
  </div>
 
 

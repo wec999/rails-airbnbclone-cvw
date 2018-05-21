@@ -9,4 +9,11 @@ class Flat < ApplicationRecord
   geocoded_by :address
   validates :photo, presence: true
   after_validation :geocode, if: :will_save_change_to_address?
+
+  include PgSearch
+  pg_search_scope :search_by_name_and_address,
+    against: [ :name, :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

@@ -1,9 +1,18 @@
+
+
 class FlatsController < ApplicationController
 
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
+    # @flats = Flat.all
+
+     if params[:query].present?
+      @flats = Flat.search_by_name_and_address(params[:query])
+    else
+      @flats = Flat.all
+    end
+
   end
 
   def show
@@ -33,6 +42,7 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    @flat = Flat.find(params[:id])
   end
 
   def update

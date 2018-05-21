@@ -4,7 +4,7 @@
 .flexed-items {
   display: flex;
   width: 100%;
-  height: 555px;
+  height: 300px;
 }
 
 .half-items {
@@ -20,7 +20,7 @@
 .flat-card {
   height: 100%;
   padding: 30px;
-  background-image: linear-gradient(-225deg, rgba(230,230,230,0.8) 0%, rgba(250,250,250,0.8) 50%), asset-url('background.jpg');
+  // background-image: linear-gradient(-225deg, rgba(230,230,230,0.8) 0%, rgba(250,250,250,0.8) 50%), asset-url('background.jpg');
   background-size: cover;
   color: white;
   text-shadow: 1px 1px grey;

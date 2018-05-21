@@ -1,14 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @flat.photo %>');">
-</div>
 
+<div class="banner booking-banner" style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), url('<%= cl_image_path @flat.photo %>');">
+<div class="booking-container">
+  <h2 id="reservation">Booking request sent for:</h2>
+  <div class="row">
+ <div class="col-sm-6">
 
-  <div class="container">
-    <div class="row">
-
-      <div class="col-sm-6">
         <h1><%= @flat.name %></h1>
-        <h4>Host Name: <%= @flat.user.email %></h4>
-        <p>Description: <%= @flat.description %></p>
+        <h4>name host: <%= @flat.user.email %></h4>
+        <p>description: <%= @flat.description %></p>
       </div>
 
       <div class="col-sm-6">
@@ -17,17 +16,12 @@
         <p><strong>Check-out:</strong> <%= @booking.end_date %></p>
         <p><strong>Days of Reservation:</strong> <%= (@booking.end_date - @booking.start_date).to_i %></p>
         <p><strong>Total Price:</strong> $<%= @booking.total_price %></p>
-        <p><strong>Reservation Status:</strong><%= @booking.status %></p>
-        <%= link_to "Change Dates", edit_flat_booking_path(@flat, @booking) %>
-        <%= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
+        <p><strong>Reservation Status:</strong> <%= @booking.status %></p>
+        <%= link_to "Change Dates", edit_flat_booking_path(@flat, @booking), class: "btn btn-sm btn-green" %>
+        <%= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), class: "btn btn-sm btn-green", method: :delete, data: {confirm: "Are you sure?"} %>
       </div>
     </div>
-
+    </div>
   </div>
-
-
-<p>##############################</p>
-<h6>Developer Control - ERASE FOR PRODUCTION</h6>
-<p>Booking ID : <%= @booking.id %></p>
-<p>Flat Id: <%= @flat.id %></p>
-<p>CLIENT NAME <%= @booking.user.email %></p>
+</div>
+</div>
