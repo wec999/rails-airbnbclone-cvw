@@ -1,17 +1,17 @@
     <div class="container-dashboard">
       <% @my_flats.each do |flat| %>
       <div class="flexed-items">
-        <div class="half-items flat">
           <%= link_to flat_path(flat) do %>
-          <div class="flat-card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.6) 0%, rgba(150,150,150,0.6) 50%), url('<%= cl_image_path flat.photo%>');">
+        <div class="half-items flat">
+          <div class="flat-card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.15) 0%, rgba(150,150,150,0.6) 50%), url('<%= cl_image_path flat.photo%>');">
             <div class="flat-name">
               <h2><%= flat.name %></h2>
             </div>
             <div class="flat-location">
               <h4><%= flat.address %></h4>
             </div>
-            <% end %>
           </div>
+            <% end %>
         </div>
 
 

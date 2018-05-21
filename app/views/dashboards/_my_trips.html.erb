@@ -1,20 +1,28 @@
-<% @trips.each do |trip|%>
-<%= link_to flat_booking_path(trip.flat_id, trip) do %>
-<div class="trip">
+<style>
+  #trips a {
+    text-decoration: none !important;
+    color: black;
+  }
+</style>
 
-  <img class="image-square" src="<%= cl_image_path trip.flat.photo%>">
-    <div class="trip-price">
-    <p>Host: <%= trip.flat.user.email %></p>
-    </div>
-  <div class="trip-body">
-    <h3><%= trip.flat.name %></h3>
-    <h4><%= trip.flat.address %></h4>
-    <p><%= trip.start_date %> - <%= trip.start_date %></p>
-  </div>
-  <div class="trip-status">
-    <p class="status pending">Status: <%= trip.status %></p>
-    <p class="trip-price">Total price: <%= trip.total_price %></p>
-  </div>
+<div id="trips">
+  <% @trips.each do |trip|%>
+    <%= link_to flat_booking_path(trip.flat_id, trip) do %>
+      <div class="trip">
+        <img class="image-square" src="<%= cl_image_path trip.flat.photo%>">
+        <div class="trip-body">
+          <h3><%= trip.flat.name %>, <%= trip.flat.address %></h3>
+          <h4><%= trip.start_date %> - <%= trip.start_date %></h4>
+        </div>
+        <div class="trip-name">
+          <h6> <%= trip.flat.user.name %></h6>
+        </div>
+        <div class="trip-status">
+          <p class="trip-price">Total price: <%= trip.total_price %></p>
+          <p class="status pending">Status: <%= trip.status %></p>
+        </div>
+      </div>
+    <% end %>
+  <hr>
+  <% end %>
 </div>
-<% end %>
-<% end %>

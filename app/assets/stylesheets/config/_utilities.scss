@@ -14,6 +14,10 @@
   margin: 5px;
 }
 
+.no-hover-text-decoration {
+  text-decoration: none !important;
+}
+
 .half-items.flat {
   width: 50%;
   background-color: #F4F4F4;
@@ -38,6 +42,7 @@
   text-shadow: 1px 1px gray;
   border-radius: 5px;
   background-color: #F4F4F4;
+  background-position:50% 50% !important;
 }
 
 .flat-booking {

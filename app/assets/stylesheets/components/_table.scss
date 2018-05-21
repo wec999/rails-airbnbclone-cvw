@@ -1,9 +1,13 @@
+
 .trip {
   display: flex;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
-
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 .trip:last-child {
   border-bottom: none;
@@ -12,8 +16,9 @@
   flex-grow: 1;
 }
 .trip-name {
-  padding-left: 10px;
-  min-width: 100px;
+  padding-left: 5px;
+  padding-right: 100px;
+
 }
 .trip-name h3 {
   font-size: 13px;
@@ -27,11 +32,13 @@
 }
 .trip-body {
   padding-left: 10px;
+  max-width: 600px;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
 }
 .trip-body {
   padding-left: 20px;
+  max-width: 600px;
   color: rgba(0,0,0,0.4);
 }
 .trip-body strong{
@@ -43,6 +50,8 @@
 }
 .trip-status {
   font-size: 14px;
+  min-width: 100px;
+  padding-right: 10px;
   font-weight: bold;
 }
 
