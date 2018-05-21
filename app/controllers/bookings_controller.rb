@@ -9,6 +9,9 @@ class BookingsController < ApplicationController
 
   def show
     @flat = Flat.find(params[:flat_id])
+    # REVIEW FORM
+    @review = Review.new
+    # CRYPTO PAYMENT
     @address = "1Chain4asCYNnLVbvG6pgCLGBrtzh4Lx4b"
     url = "https://api-r.bitcoinchain.com/v1/address/utxo/#{@address}"
     response = RestClient.get(url)

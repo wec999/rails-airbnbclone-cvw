@@ -6,7 +6,12 @@
   background-position:50% 50% !important;
   color: white;
   position: relative;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+
+}
+
+.card:hover {
+  background-image: linear-gradient(rgba(200,200,200,0.2), rgba(200,200,200,0.2));
 }
 .card-user {
   position: absolute;
