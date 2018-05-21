@@ -8,6 +8,7 @@
     <div class="col-sm-6">
       <h1><%= @flat.name %></h1>
       <h4>Host Name: <%= @flat.user.email %></h4>
+      <h4>Address: <%= @flat.address %></h4>
       <p>Description: <%= @flat.description %></p>
       <div id="map" style="width: 80%; height: 300px;" data-markers="<%= @markers.to_json %>"></div>
     </div>
