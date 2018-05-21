@@ -1,10 +1,10 @@
 
 <div class="banner booking-banner" style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.6) 50%), url('<%= cl_image_path @flat.photo %>');">
-<div class="booking-container">
-  <h2 id="reservation">Booking request sent for:</h2>
-  <div class="row">
- <div class="col-sm-6">
 
+  <div class="booking-container">
+    <h2 id="reservation">Booking request sent for:</h2>
+    <div class="row">
+      <div class="col-sm-6">
         <h1><strong><%= @flat.name %></strong></h1>
         <h4><strong>Host name:</strong> <%= @flat.user.name %></h4>
         <p><strong>Description:</strong> <%= @flat.description %></p>
@@ -21,7 +21,40 @@
         <%= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), class: "btn btn-sm btn-green", method: :delete, data: {confirm: "Are you sure?"} %>
       </div>
     </div>
+  </div>
+
+
+
+</div>
+
+<div class="banner">
+  <div class="booking-container">
+    <h2 id="reservation">Review Flat and Booking:</h2>
+    <div class="row">
+      <div class="col-sm-6 col-offset-3">
+
+        <% if @booking.reviews.empty? %>
+          <p>I am inside the if</p>
+
+          <%= simple_form_for [@flat, @booking, @review] do |f| %>
+            <%= f.input :content %>
+            <%= f.submit class: "btn btn-green" %>
+          <% end %>
+        <% else %>
+        <p>I am inside the else</p>
+            <% @booking.reviews.each do |review| %>
+              <%= review.content %>
+              <h4><strong>Client Name:</strong><%= review.booking.user.name %></h4>
+            <% end %>
+        <% end %>
+
+
+        <h5><strong>Host name:</strong> <%= @flat.user.name %></h5>
+
+
+      </div>
+
+
     </div>
   </div>
-</div>
 </div>

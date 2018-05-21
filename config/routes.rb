@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/home', to: 'pages#home', as: 'home'
 
   resources :flats do
-    resources :bookings
+    resources :bookings  do
+      resources :reviews, only: [:new, :create]
+    end
   end
 
   devise_for :users, :controllers => {registrations: 'registrations'}
