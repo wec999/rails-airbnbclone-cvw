@@ -11,38 +11,22 @@ User.create(name: "Valerie Schraauwers", email: "valerie@valerie.com", password:
 User.create(name: "Chelsea Stortz", email: "chelsea@chelsea.com", password: "password")
 User.create(name: "William Calderon", email: "william@william.com", password: "password")
 
-Flat.create(user_id: 1, name: "Mountain View Flat", address: "Leticia", photo: "images/hut1.jpg", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
-Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
-It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
-You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums.",
-price: 50, latitude: -4, longitude: -70)
+images = []
 
-Flat.create(user_id: 1, name: "Mountain View Flat", address: "Manaus", photo: "image/upload/v1526616977/hyomzbfnzelev0v4tv56.jpg", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
-Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
-It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
-You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums.",
+f = Flat.new(user_id: 1, name: "Mountain View Flat", address: "Manaus", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
 price: 40, latitude: -4, longitude: -70)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/21611933/43f6de69_original.jpg?aki_policy=xx_large"
+f.save
 
-Flat.create(user_id: 1, name: "Mountain View Flat", address: "Leticia", photo: "image/upload/v1526616977/hyomzbfnzelev0v4tv56.jpg", description: "test", price: 30, latitude: -4, longitude: -70)
+f = Flat.new(user_id: 2, name: "Jungle View Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
+price: 40, latitude: -4, longitude: -69)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85695860/6bc94bff_original.jpg?aki_policy=xx_large"
+f.save
 
-Flat.create(user_id: 1, name: "Mountain View Flat", address: "Manaus", photo: "image/upload/v1526616977/hyomzbfnzelev0v4tv56.jpg", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
-Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
-It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
-You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums.",
-price: 20, latitude: -4, longitude: -70)
+f = Flat.new(user_id: 3, name: "Leopard View Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
+price: 40, latitude: -4, longitude: -68)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85693430/58132949_original.jpg?aki_policy=x_large"
+f.save
 
-Flat.create(user_id: 2, name: "Mountain View Flat", address: "Leticia", photo: "image/upload/v1526616977/hyomzbfnzelev0v4tv56.jpg", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
-Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
-It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
-You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums.",
-price: 10, latitude: -4, longitude: -70)
-
-Flat.create(user_id: 3, name: "Mountain View Flat", address: "Manaus", photo: "image/upload/v1526616977/hyomzbfnzelev0v4tv56.jpg", description: "Spend a unforgettable holiday in the enchanting surroundings of the town of Cisternino (reachable from the near airports of Bari and Brindisi).
-Trullo Edera offers a heaven of peace and tranquillity, set in an elevated position with a stunning view.
-It's the perfect place if you like nature. You can stay under an olive tree reading a good book, you can have a walk in the small country streets or go to the nearest beaches.
-You can even easily visit any of the sights in Apulia such as the caves of Castellana, the trulli of Alberobello, the baroque cities of Lecce and Martina Franca, the excavations of Egnazia, the zoosafari of Fasano, Castel del Monte with Frederick's castle, Grottaglie famous for its ceramics, Taranto, Brindisi and Lecce museums.",
-price: 50, latitude: -4, longitude: -70)
-
-
-Booking.create(start_date: "2018-06-01", end_date: "2018-06-08", total_price: 150, status: "pending", user_id: 1, flat_id: 13)
-Booking.create(start_date: "2018-04-01", end_date: "2019-04-01", total_price: 1000000, status: "pending", user_id:1, flat_id: 25)
+Booking.create(start_date: "2018-06-01", end_date: "2018-06-08", total_price: 150, status: "pending", user_id: 1, flat_id: 2)
+Booking.create(start_date: "2018-04-01", end_date: "2019-04-01", total_price: 1000000, status: "pending", user_id:1, flat_id: 3)
