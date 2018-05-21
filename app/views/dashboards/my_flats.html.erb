@@ -4,6 +4,7 @@
   <% @my_flats.each do |flat| %>
   <div class="flexed-items">
     <div class="half-items">
+      <%= link_to flat_path(flat) do %>
       <div class="flat-card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.6) 0%, rgba(150,150,150,0.6) 50%), url('<%= cl_image_path flat.photo%>');">
         <div class="flat-name">
           <h2><%= flat.name %></h2>
@@ -14,6 +15,7 @@
         <div class="flat-body">
           <h4>Number of bookings: <%= flat.bookings.count %></h4>
         </div>
+        <% end %>
       </div>
     </div>
 
