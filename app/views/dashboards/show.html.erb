@@ -1,0 +1,42 @@
+ <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#trips" aria-controls="trips" role="tab" data-toggle="tab">My Upcoming Trips</a>
+    </li>
+    <% if @host %>
+    <li role="presentation"><a href="#my-bookings" aria-controls="my-bookings" role="tab" data-toggle="tab">My Bookings </a></li>
+    <% end %>
+    <% if @host %>
+    <li role="presentation"><a href="#my-houses" aria-controls="my-houses" role="tab" data-toggle="tab">My Houses </a></li>
+    <% end %>
+</ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="trips">
+      <h1>My Upcoming Trips</h1>
+      <%= render 'my_trips' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="my-bookings">
+      <h1>My Bookings</h1>
+      <% if @host %>
+      <%= render 'my_bookings' %>
+      <% end %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="my-houses">
+      <h1>My Houses</h1>
+     <% if @host %>
+      <%= render 'my_houses' %>
+      <% end %>
+    </div>
+  </div>
+
+
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $('#myTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+  </script>
+<% end %>

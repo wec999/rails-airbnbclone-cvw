@@ -9,7 +9,19 @@
 
 .half-items {
   width: 50%;
-  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.half-items.flat {
+  width: 50%;
+  background-color: #F4F4F4;
+  border-radius: 5px;
+    a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .scroll-box {
@@ -24,8 +36,15 @@
   background-size: cover;
   color: white;
   text-shadow: 1px 1px gray;
-  text-decoration: none;
+  border-radius: 5px;
+  background-color: #F4F4F4;
 }
+
+.flat-booking {
+  height: 100%;
+  background-color: #F4F4F4;
+}
+
 
 #query {
   border: 1px solid #57771E;
