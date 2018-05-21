@@ -9,6 +9,29 @@
   background-position:50% 50% !important
 }
 
+.banner.flat-banner {
+  position: relative;
+}
+
+.banner.flat-banner h1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px #577626;
+}
+
+.banner.booking-banner {
+  height: 90vh;
+}
+
+.banner.booking-banner h2{
+  text-align: center;
+}
+
+
+
 .banner-content {
   color: white;
   margin: 10px;
