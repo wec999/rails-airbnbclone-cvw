@@ -19,42 +19,59 @@
         <p><strong>Reservation Status:</strong> <%= @booking.status %></p>
         <%= link_to "Change Dates", edit_flat_booking_path(@flat, @booking), class: "btn btn-sm btn-green" %>
         <%= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), class: "btn btn-sm btn-green", method: :delete, data: {confirm: "Are you sure?"} %>
+
+        <% if @booking.reviews.empty? %>
+        <button type="button" class="btn btn-sm btn-green" data-toggle="modal" data-target="#exampleModal">
+          Add a Review
+        </button>
+        <% end %>
+
       </div>
     </div>
   </div>
-
-
-
 </div>
 
+<% if !@booking.reviews.empty? %>
 <div class="banner">
-  <div class="booking-container">
-    <h2 id="reservation">Review Flat and Booking:</h2>
-    <div class="row">
-      <div class="col-sm-6 col-offset-3">
+          <div class="booking-container">
+            <h2 id="reservation">Review Flat and Booking:</h2>
+            <div class="row">
+              <div class="col-sm-6 col-offset-3">
+                <% @booking.reviews.each do |review| %>
+                <%= review.content %>
+                <h4><strong>Client Name:</strong><%= review.booking.user.name %></h4>
+                <% end %>
+                <h5><strong>Host name:</strong> <%= @flat.user.name %></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+<% end %>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Add a Review</h2>
+        <h5><strong>Host name:</strong> <%= @flat.user.name %></h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
         <% if @booking.reviews.empty? %>
-          <p>I am inside the if</p>
 
-          <%= simple_form_for [@flat, @booking, @review] do |f| %>
-            <%= f.input :content %>
-            <%= f.submit class: "btn btn-green" %>
-          <% end %>
-        <% else %>
-        <p>I am inside the else</p>
-            <% @booking.reviews.each do |review| %>
-              <%= review.content %>
-              <h4><strong>Client Name:</strong><%= review.booking.user.name %></h4>
-            <% end %>
+        <%= simple_form_for [@flat, @booking, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.submit class: "btn btn-sm btn-green" %>
         <% end %>
 
-
-        <h5><strong>Host name:</strong> <%= @flat.user.name %></h5>
-
-
+        <% end %>
       </div>
-
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
