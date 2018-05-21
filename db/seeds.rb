@@ -19,12 +19,27 @@ f.remote_photo_url =  "https://a0.muscache.com/im/pictures/21611933/43f6de69_ori
 f.save
 
 f = Flat.new(user_id: 2, name: "Jungle View Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
-price: 40, latitude: -4, longitude: -69)
+price: 60, latitude: -4, longitude: -69)
 f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85695860/6bc94bff_original.jpg?aki_policy=xx_large"
 f.save
 
 f = Flat.new(user_id: 3, name: "Leopard View Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
-price: 40, latitude: -4, longitude: -68)
+price: 50, latitude: -4, longitude: -68)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85693430/58132949_original.jpg?aki_policy=x_large"
+f.save
+
+f = Flat.new(user_id: 1, name: "Brazil View Flat", address: "Manaus", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
+price: 30, latitude: -4, longitude: -70)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/21611933/43f6de69_original.jpg?aki_policy=xx_large"
+f.save
+
+f = Flat.new(user_id: 2, name: "Amazonas Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
+price: 10, latitude: -4, longitude: -69)
+f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85695860/6bc94bff_original.jpg?aki_policy=xx_large"
+f.save
+
+f = Flat.new(user_id: 3, name: "Ayahuasca Flat", address: "Leticia", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue aliquam ornare. Aliquam feugiat magna et elit congue, a egestas urna tincidunt. Nam enim ex, condimentum sit amet maximus eu, vulputate et dui. Proin bibendum lacus ac risus maximus dictum. Aenean malesuada, enim ac feugiat elementum, nibh ex finibus ipsum.",
+price: 20, latitude: -4, longitude: -68)
 f.remote_photo_url =  "https://a0.muscache.com/im/pictures/85693430/58132949_original.jpg?aki_policy=x_large"
 f.save
 

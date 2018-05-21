@@ -6,13 +6,12 @@
   <h1><%= @flat.name %></h1>
   <%= link_to 'Back', flats_path, class: "btn btn-xs btn-green", id: "back" %>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-
       <br>
       <h5><strong>Address:</strong> <%= @flat.address %></h5>
-
       <p><strong>Description:</strong> <%= @flat.description %></p>
       <h6><strong>Host:</strong> <%= @flat.user.name %></h6>
         <!-- <p><strong>Check-in:</strong> <%#= @booking.start_date %></p>
@@ -20,9 +19,7 @@
           <!-- <p><strong>Days of Reservation:</strong> <%#= (@booking.end_date - @booking.start_date).to_i %></p> -->
           <p><strong>Price per night:</strong> $<%= @flat.price %></p>
           <!-- <p><strong>Reservation Statu:</strong><%#= @booking.status %></p> -->
-
           <% if current_user == @flat.user %>
-
           <%= link_to "Edit house", edit_flat_path(@flat), class: "btn btn-xs btn-green"  %>
           <%= link_to "Delete", flat_path(@flat), class: "btn btn-xs btn-green",
           method: :delete,
@@ -34,9 +31,6 @@
           <br>
           <br>
           <p>Pay to <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=1Chain4asCYNnLVbvG6pgCLGBrtzh4Lx4b" alt="" id="qr"></p>
-
-
-
           <% end %>
 
           <%#= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
@@ -48,4 +42,33 @@
           <br>
         </div>
       </div>
-    </div>
+
+
+
+
+<div class="row">
+
+      <div class="message">
+        <%@flat.bookings.each do |booking|%>
+        <% booking.reviews.each do |review| %>
+        <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <div class="message-name">
+          <h3>Gab Dehan</h3>
+          <p>10/07/17</p>
+        </div>
+        <div class="message-body">
+          <p><strong><%=review.booking.flat.name%></strong></p>
+          <p>
+            <%= review.content %>
+          </p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+
+        </div>
+      <% end %>
+      <% end %>
+      </div>
+
+</div>
+ </div>
