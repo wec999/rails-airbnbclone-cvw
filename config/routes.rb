@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/my_flats', to: 'dashboards#my_flats'
   patch '/bookings/:id/approve', to: 'bookings#change_status_approve', as: 'booking_approve'
   patch '/bookings/:id/decline', to: 'bookings#change_status_decline', as: 'booking_decline'
+  get '/home', to: 'pages#home', as: 'home'
 
   resources :flats do
     resources :bookings

@@ -1,28 +1,22 @@
-<%= render 'layouts/banner' %>
-
-<h1>Top Flats</h1>
 <div class="container">
+  <h1>Top Flats</h1>
   <div class="row">
-
     <% @flats.each do |flat| %>
-
     <div class="col-md-3">
       <% if flat.photo.file == nil %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
-      <%  else %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path flat.photo %>')">
-        <% end %>
-        <div class="card-category"><%=flat.price %></div>
-        <div class="card-description">
-          <%= link_to flat.name, flat_path(flat.id) %>
+        <%  else %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path flat.photo %>')">
+          <% end %>
+          <div class="card-category"><%=flat.price %></div>
+          <div class="card-description">
+            <%= link_to flat.name, flat_path(flat.id) %>
+          </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
-
-
 
 
 

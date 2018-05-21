@@ -2,15 +2,11 @@
 </div>
 -->
 
- <% if @flat.photo.file == nil %>
-      <div class="banner" style="background-position: center center;  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("jungle_leaves.jpeg") %>')"></div>
-      <%  else %>
-      <div class="banner" style="background-position: center center;  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @flat.photo %>')"></div>
-        <% end %>
-
-
-
-
+<% if @flat.photo.file == nil %>
+<div class="banner" style="background-position: center center;  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("jungle_leaves.jpeg") %>')"></div>
+<%  else %>
+<div class="banner" style="background-position: center center;  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @flat.photo %>')"></div>
+<% end %>
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
