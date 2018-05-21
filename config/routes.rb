@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   patch '/bookings/:id/decline', to: 'bookings#change_status_decline', as: 'booking_decline'
 
   resources :flats do
-    resources :bookings
+    resources :bookings  do
+      resources :reviews, only: [:new, :create]
+    end
   end
 
   devise_for :users, :controllers => {registrations: 'registrations'}
