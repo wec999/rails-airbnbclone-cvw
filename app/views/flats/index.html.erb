@@ -5,9 +5,9 @@
       <% @flats.each do |flat| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <% if flat.photo.file == nil %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
+     <div class="card" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(220,220,220,0.3)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
           <%  else %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path flat.photo %>')">
+      <div class="card" style="background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('<%= cl_image_path flat.photo %>')">
             <% end %>
             <div class=“card-category”>
              <h3><%= flat.name %></h3>
@@ -21,11 +21,9 @@
        <% end %>
      </div>
    </div>
-   <br>
-   <div id="map" style="width: 100%; height: 900px;" data-markers="<%= @markers.to_json %>"></div>
+   <div id="map" style="width: 80%; height: 800px;" data-markers="<%= @markers.to_json %>"></div>
  </div>
 </div>
-
 
 
 
