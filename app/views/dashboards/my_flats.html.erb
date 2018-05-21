@@ -12,16 +12,13 @@
         <div class="flat-location">
           <h4><%= flat.address %></h4>
         </div>
-        <div class="flat-body">
-          <h4>Number of bookings: <%= flat.bookings.count %></h4>
-        </div>
         <% end %>
       </div>
     </div>
 
 
       <div class="half-items">
-        <h6>Bookings for this flat</h6>
+        <h6>Bookings for this flat: <%= flat.bookings.count %> </h6>
         <hr>
 
        <div class="scroll-box">

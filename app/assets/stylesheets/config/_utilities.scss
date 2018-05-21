@@ -23,9 +23,11 @@
   // background-image: linear-gradient(-225deg, rgba(230,230,230,0.8) 0%, rgba(250,250,250,0.8) 50%), asset-url('background.jpg');
   background-size: cover;
   color: white;
-  text-shadow: 1px 1px grey;
+  text-shadow: 1px 1px gray;
+  text-decoration: none;
 }
 
 #query {
   border: 1px solid #57771E;
+  font-style: italic;
 }
