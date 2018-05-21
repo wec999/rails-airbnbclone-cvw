@@ -1,19 +1,24 @@
 <%= render 'layouts/banner' %>
-
-<h1>Top Flats</h1>
+<br>
+<br>
 <div class="container">
   <div class="row">
 
     <% @flats.each do |flat| %>
 
     <div class="col-md-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path flat.photo %>')">
-        <div class="card-category"><%=flat.price %></div>
+        <%= link_to flat_path(flat) do %>
+      <div class="card" style="background-image: linear-gradient(rgba(220,220,220,0.3), rgba(220,220,220,0.2)), url('<%= cl_image_path flat.photo %>')">
+        <div class="card-category">
+          <h3><%= flat.name %></h3>
+        </div>
         <div class="card-description">
-          <%= link_to flat.name, flat_path(flat.id) %>
+          <h2>$<%=flat.price %></h2>
+          <p><%= flat.address %></p>
         </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   </div>
 </div>

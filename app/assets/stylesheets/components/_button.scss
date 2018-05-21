@@ -1,6 +1,14 @@
 /* Feel free to use your own button CSS code (from previous challenge) */
 /* Here is a sample button design */
 
+#back {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #577626;
+  color: white;
+}
+
 .btn-status {
   width: 70px;
   font-size: 10px;
@@ -8,9 +16,19 @@
 
 }
 
+.btn-xs.btn-green {
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px 15px;
+}
+
+.btn-sm.btn-green {
+  font-size: 15px;
+}
+
 .btn-green {
   color: white;
-  padding: 25px 35px;
+  padding: 15px 20px;
   border-radius: 4px;
   font-weight: bold;
   font-size: 20px;

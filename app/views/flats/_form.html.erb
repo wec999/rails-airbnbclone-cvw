@@ -1,10 +1,11 @@
 
-<%= simple_form_for(flat) do |f| %>
-<%= f.input :name, placeholder: "Please enter a description of your property" %>
+<%= simple_form_for(@flat) do |f| %>
+<%= f.input :name, placeholder: "Please enter a name" %>
 <%= f.input :address, placeholder: "Please enter an address" %>
-<%= f.input :description, placeholder: "Please add a description of your property here" %>
-<%= f.input :price, placeholder: "Please enter a price per night." %>
+<%= f.input :description, placeholder: "Please add a description" %>
+<%= f.input :price, placeholder: "Please enter a price per night" %>
 <%= f.input :photo %>
 <%= f.input :photo_cache, as: :hidden %>
-<%= f.submit button_text, class: "btn btn-primary"  %>
+<%= f.submit "Save", class: "btn btn-xs btn-green"  %>
+<%= link_to 'Back', flats_path, class: "btn btn-xs btn-green"  %>
 <% end %>
