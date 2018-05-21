@@ -12,7 +12,12 @@ class FlatsController < ApplicationController
     else
       @flats = Flat.all
     end
-
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+      }
+    end
   end
 
   def show
@@ -23,8 +28,8 @@ class FlatsController < ApplicationController
       }]
       @address = "1Chain4asCYNnLVbvG6pgCLGBrtzh4Lx4b"
     url = "https://api-r.bitcoinchain.com/v1/address/utxo/#{@address}"
-    response = RestClient.get(url)
-    @data = JSON.parse(response)
+    # response = RestClient.get(url)
+    # @data = JSON.parse(response)
   end
 
   def new
