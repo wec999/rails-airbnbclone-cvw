@@ -12,19 +12,16 @@
 
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="trips">
-      <h1>My Upcoming Trips</h1>
       <%= render 'my_trips' %>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="my-bookings">
-      <h1>My Bookings</h1>
       <% if @host %>
       <%= render 'my_bookings' %>
       <% end %>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="my-houses">
-      <h1>My Houses</h1>
      <% if @host %>
       <%= render 'my_houses' %>
       <% end %>

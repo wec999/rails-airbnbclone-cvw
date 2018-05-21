@@ -1,3 +1,28 @@
-.tabs-active {
-  color: red;
+.nav {
+  a {
+  color: lightgrey;
+  font-size: 35px;
+  font-weight: lighter;
+}
+}
+
+a:hover {
+    color: #57771E;
+    border-bottom: 3px solid #57771E;
+  }
+
+.nav-tabs > li.active > a{
+  color: #57771E;
+  border-bottom: 3px solid #57771E;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #57771E;
+  border-bottom: 3px solid #57771E;
+}
+
+.nav-tabs > li.active > a:hover{
+  color: #57771E;
+  border-bottom: 3px solid #57771E;
+
 }
