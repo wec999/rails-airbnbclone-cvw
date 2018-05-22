@@ -1,14 +1,14 @@
-<div class="container">
+<div class="house-container">
   <div class="row">
 
     <% @my_flats.each do |flat| %>
 
-    <div class="col-md-3">
+    <div class="col-md-12">
         <%= link_to flat_path(flat) do %>
         <% if flat.photo.file == nil %>
-          <div class="card" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(220,220,220,0.3)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
+          <div class="house-card" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(220,220,220,0.3)), url('<%= asset_path("jungle_leaves.jpeg") %>')">
             <%  else %>
-          <div class="card" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.5)), url('<%= cl_image_path flat.photo %>')">
+          <div class="house-card" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.5)), url('<%= cl_image_path flat.photo %>')">
         <% end %>
             <div class="card-category">
               <h3><%= flat.name %></h3>

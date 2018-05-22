@@ -7,6 +7,30 @@
   height: 300px;
 }
 
+.flexed-houses {
+  display: flex;
+  width: 75%;
+  height: 300px;
+}
+
+.houses-items {
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.houses-items.flat {
+  width: 50%;
+  background-color: #F4F4F4;
+  border-radius: 5px;
+    a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
 .half-items {
   width: 50%;
   background-color: white;
@@ -54,4 +78,8 @@
 #query {
   border: 1px solid #57771E;
   font-style: italic;
+}
+
+.house-row {
+  padding-left: 20px;
 }

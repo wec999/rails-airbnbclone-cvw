@@ -1,3 +1,7 @@
+
+
+
+
 .booking-container {
   background: white;
   opacity: 0.8;
@@ -15,4 +19,33 @@
 .cards-container {
   margin-left: 18px;
   margin-right: 18px;
+
+}
+
+.house-container {
+  padding: 40px;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card-container {
+padding: 25px 20px;
+margin-left: 20px;
+}
+
+.container-review {
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafcf7;
+}
+
+.container {
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }

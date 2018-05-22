@@ -2,7 +2,7 @@
 </div>
 -->
 
-<div class="banner flat-banner" style="background-image: linear-gradient(-225deg, rgba(10, 41, 11, 0.32) 0%, rgba(5, 23, 6, 0.15) 50%), url('<%= cl_image_path @flat.photo %>');">
+<div id="myImg" alt="<%= @flat.name %>" src="<%= cl_image_path @flat.photo %>" class="banner flat-banner" style="background-image: linear-gradient(-225deg, rgba(10, 41, 11, 0.32) 0%, rgba(5, 23, 6, 0.15) 50%), url('<%= cl_image_path @flat.photo %>');">
   <h1><%= @flat.name %></h1>
   <%= link_to 'Back', flats_path, class: "btn btn-xs btn-green", id: "back" %>
 </div>
@@ -45,30 +45,42 @@
 
 
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
+          <h2><%= Review.count %> reviews </h2>
+          <hr>
+      <div class="container-review">
             <%@flat.bookings.each do |booking|%>
             <% booking.reviews.each do |review| %>
-            <div class="message">
+            <div class="review">
               <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-              <div class="message-name">
+              <div class="review-name">
                 <h3>Gab Dehan</h3>
                 <p>10/07/17</p>
               </div>
-              <div class="message-body">
-                <p><strong><%=review.booking.flat.name%></strong></p>
+              <div class="review-body">
                 <p>
                   <%= review.content %>
                 </p>
               </div>
-              <div class="message-status">
-                <p class="status pending">Pending</p>
+              <div class="review-status">
+                <p class="status pending">Stars</p>
               </div>
             </div>
             <% end %>
             <% end %>
           </div>
         </div>
-      </div>
-    </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="img-modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="img-modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="img-caption"></div>
+</div>
+
