@@ -45,33 +45,31 @@
 
 
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
+          <h2><%= Review.count %> reviews </h2>
+          <hr>
+      <div class="container-review">
             <%@flat.bookings.each do |booking|%>
             <% booking.reviews.each do |review| %>
-            <div class="message">
+            <div class="review">
               <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-              <div class="message-name">
+              <div class="review-name">
                 <h3>Gab Dehan</h3>
                 <p>10/07/17</p>
               </div>
-              <div class="message-body">
-                <p><strong><%=review.booking.flat.name%></strong></p>
+              <div class="review-body">
                 <p>
                   <%= review.content %>
                 </p>
               </div>
-              <div class="message-status">
-                <p class="status pending">Pending</p>
+              <div class="review-status">
+                <p class="status pending">Stars</p>
               </div>
             </div>
             <% end %>
             <% end %>
           </div>
         </div>
-      </div>
-    </div>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
