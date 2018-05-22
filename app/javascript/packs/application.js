@@ -1,5 +1,5 @@
 import "bootstrap";
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
 
 // import GMaps from 'gmaps/gmaps.js';
 
