@@ -65,3 +65,24 @@
 .card a {
   color: white;
 }
+
+.house-card {
+  height: 200px;
+  width: 900px;
+  padding: 20px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position:50% 50% !important;
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+  transition: .2s;
+  opacity: 0.9;
+  border-radius: 3px;
+  box-shadow: 1.5px 1.5px lightgrey;
+}
+
+.house-card:hover {
+  opacity: 1;
+  transform: translateX(+5px);
+}
