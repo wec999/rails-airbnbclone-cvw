@@ -2,7 +2,7 @@
 </div>
 -->
 
-<div class="banner flat-banner" style="background-image: linear-gradient(-225deg, rgba(10, 41, 11, 0.32) 0%, rgba(5, 23, 6, 0.15) 50%), url('<%= cl_image_path @flat.photo %>');">
+<div id="myImg" alt="<%= @flat.name %>" src="<%= cl_image_path @flat.photo %>" class="banner flat-banner" style="background-image: linear-gradient(-225deg, rgba(10, 41, 11, 0.32) 0%, rgba(5, 23, 6, 0.15) 50%), url('<%= cl_image_path @flat.photo %>');">
   <h1><%= @flat.name %></h1>
   <%= link_to 'Back', flats_path, class: "btn btn-xs btn-green", id: "back" %>
 </div>
@@ -72,3 +72,17 @@
         </div>
       </div>
     </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
