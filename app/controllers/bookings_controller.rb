@@ -21,11 +21,14 @@ class BookingsController < ApplicationController
   def new
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.new
+    @price = 0
   end
 
   def create
+
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.new(booking_params)
+
     @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @flat.price #saving price
     @booking.flat = @flat
     @booking.user = current_user

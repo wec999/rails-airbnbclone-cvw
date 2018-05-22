@@ -6,13 +6,15 @@
       <h1><%= @flat.name %></h1>
       <h6><strong>Description:</strong> <%= @flat.description %></h6>
       <p><strong>Host:</strong> <%= @flat.user.name %></p>
-      <h2>$<%=@flat.price %> per Night</h2>
+      <h2>$</h2><h2 id="price"><%=@flat.price %><h2>per Night</h2>
     </div>
     <h1></h1>
     <div class="col-sm-6">
       <%= render 'form', booking: @booking, flat: @flat, button_text: "Send booking request", class: "btn btn-xs btn-green" %>
-      <h3>TOTAL_PRICE: ></h3>
+      <h4>TOTAL_PRICE: $</h4><h4 id="total-price"></h4>
     </div>
   </div>
 </div>
 </div>
+
+
