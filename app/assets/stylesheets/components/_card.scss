@@ -1,4 +1,6 @@
+
 .card {
+  margin: 15px auto;
   height: 215px;
   width: 275px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -6,7 +8,6 @@
   background-position:50% 50% !important;
   color: white;
   position: relative;
-  margin-bottom: 20px;
   transition: .2s;
   opacity: 0.8;
   border-radius: 3px;

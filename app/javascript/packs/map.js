@@ -205,10 +205,10 @@ const styles = [
             }
         ]
     }
-] ;
+];
 
-// map.addStyle({
-//   styles: styles,
-//   mapTypeId: 'map_style'
-// });
-// map.setStyle('map_style');
+map.addStyle({
+styles: styles,
+mapTypeId: 'map_style'
+});
+map.setStyle('map_style');

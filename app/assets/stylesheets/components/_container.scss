@@ -1,9 +1,24 @@
+
+
+
+
 .booking-container {
   background: white;
   opacity: 0.8;
   padding: 20px 35px;
   width: 900px;
   border-radius: 5px;
+}
+
+.container {
+  margin-top: 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards-container {
+  margin-left: 18px;
+  margin-right: 18px;
 
 }
 
@@ -16,7 +31,7 @@
   margin-left: auto;
 }
 
-.cards-container {
+.card-container {
 padding: 25px 20px;
 margin-left: 20px;
 }
