@@ -9,7 +9,7 @@ function priceCalculator() {
     let timeDiff = Math.abs(date2.getTime() - date1.getTime());
     let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
-    finalPrice = price * diffDays;
+    let finalPrice = price * diffDays;
 
 
     if (isNaN(finalPrice) == false) {
@@ -18,16 +18,17 @@ function priceCalculator() {
   }
 
   const startDate = document.getElementById("booking_start_date");
+  if(startDate === null) return;
+
   const endDate = document.getElementById("booking_end_date");
   const priceNight = document.getElementById("price");
 
-  //console.log(startDate);
 
   startDate.addEventListener('change', calculatePrice);
   endDate.addEventListener('change', calculatePrice);
 
 }
 
-
+export {priceCalculator};
 
 
