@@ -17,58 +17,58 @@
         <!-- <p><strong>Check-in:</strong> <%#= @booking.start_date %></p>
           <p><strong>Check-out:</strong> <%#= @booking.end_date %></p> -->
           <!-- <p><strong>Days of Reservation:</strong> <%#= (@booking.end_date - @booking.start_date).to_i %></p> -->
-          <p><strong>Price per night:</strong> $<%= @flat.price %></p>
-          <!-- <p><strong>Reservation Statu:</strong><%#= @booking.status %></p> -->
-          <% if current_user == @flat.user %>
-          <%= link_to "Edit house", edit_flat_path(@flat), class: "btn btn-xs btn-green"  %>
-          <%= link_to "Delete", flat_path(@flat), class: "btn btn-xs btn-green",
-          method: :delete,
-          data: { confirm: "Are you certain?" } %>
-          <% else %>
-          <%= link_to "Make a Reservation", new_flat_booking_path(@flat), class: "btn btn-xs btn-green"  %>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p>Pay to <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=1Chain4asCYNnLVbvG6pgCLGBrtzh4Lx4b" alt="" id="qr"></p>
-          <% end %>
+      <p><strong>Price per night:</strong> $<%= @flat.price %></p>
+      <!-- <p><strong>Reservation Statu:</strong><%#= @booking.status %></p> -->
+      <% if current_user == @flat.user %>
+      <%= link_to "Edit house", edit_flat_path(@flat), class: "btn btn-xs btn-green"  %>
+      <%= link_to "Delete", flat_path(@flat), class: "btn btn-xs btn-green",
+      method: :delete,
+      data: { confirm: "Are you certain?" } %>
+      <% else %>
+      <%= link_to "Make a Reservation", new_flat_booking_path(@flat), class: "btn btn-xs btn-green"  %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Pay to <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=1Chain4asCYNnLVbvG6pgCLGBrtzh4Lx4b" alt="" id="qr"></p>
+      <% end %>
 
-          <%#= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
-        </div>
-        <div class="col-sm-6">
-          <br>
-          <div id="map" style="width: 100%; height: 350px;" data-markers="<%= @markers.to_json %>">
-          </div>
-          <br>
-        </div>
+      <%#= link_to "Cancel Booking", flat_booking_path(@booking.flat, @booking), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <div id="map" style="width: 100%; height: 350px;" data-markers="<%= @markers.to_json %>">
       </div>
+      <br>
+    </div>
+  </div>
 
 
 
-          <h2><%= Review.count %> reviews </h2>
-          <hr>
-      <div class="container-review">
-            <%@flat.bookings.each do |booking|%>
-            <% booking.reviews.each do |review| %>
-            <div class="review">
-              <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-              <div class="review-name">
-                <h3>Gab Dehan</h3>
-                <p>10/07/17</p>
-              </div>
-              <div class="review-body">
-                <p>
-                  <%= review.content %>
-                </p>
-              </div>
-              <div class="review-status">
-                <p class="status pending">Stars</p>
-              </div>
-            </div>
-            <% end %>
-            <% end %>
-          </div>
-        </div>
+  <h2><%= Review.count %> reviews </h2>
+  <hr>
+  <div class="container-review">
+    <%@flat.bookings.each do |booking|%>
+    <% booking.reviews.each do |review| %>
+    <div class="review">
+      <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+      <div class="review-name">
+        <h3>Gab Dehan</h3>
+        <p>10/07/17</p>
+      </div>
+      <div class="review-body">
+        <p>
+          <%= review.content %>
+        </p>
+      </div>
+      <div class="review-status">
+        <p class="status pending">Stars</p>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
 
 
 <!-- The Modal -->
@@ -84,7 +84,5 @@
   <div id="img-caption"></div>
 </div>
 
-<% content_for :after_js do %>
-  <script> modalPopup(); </script>
-<% end %>
+
 

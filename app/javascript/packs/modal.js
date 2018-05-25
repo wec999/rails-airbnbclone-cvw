@@ -1,7 +1,7 @@
 function modalPopup() {
   // Get the modal
   const modal = document.getElementById('myModal');
-  if(modal === null) return;
+  // if(modal === null) return;
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
   const img = document.getElementById('myImg');
